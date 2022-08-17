@@ -1,0 +1,66 @@
+/* Background styles */
+.TodoApp {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Content Box styles */
+.TodoBox {
+    margin: 2rem 0;
+    border-radius: 1rem;
+    min-height: 45rem;
+    width: 90rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.TodoBox-Container {
+
+}
+
+/* Header */
+.Header {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Form */
+input {
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+/* Todo list */
+.TodoList {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.TodoList-Btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Todo-Status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+
+/* Footer */
+.Footer {
+    color: hsl(234, 11%, 52%);
+    text-align: center;
+}
+
