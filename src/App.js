@@ -5,7 +5,7 @@ function App() {
   return (
     <div className='TodoApp'>
       <TodoBox />
-    </div>
+    </div> 
   );
 }
 
