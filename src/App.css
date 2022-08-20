@@ -5,7 +5,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsl(235, 21%, 11%);
+}
+
+.TodoApp.dark-mode {
+    background-color: beige;
+}
+
+.TodoApp.light-mode {
+    background-color: black;
 }
 
 
