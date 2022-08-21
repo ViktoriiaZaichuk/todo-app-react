@@ -10,7 +10,7 @@
 }
 
 
-:root {
+:root { 
   /* Light Theme */
   --color-very-light-gray: hsl(0, 0%, 98%);
   --color-very-light-grayish-blue: hsl(236, 33%, 92%);
