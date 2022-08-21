@@ -1,24 +1,19 @@
-import React from "react";
-import useDarkMode from "use-dark-mode";
-import { useTheme } from "./Theme.js";
+import React, { useContext } from "react";
+import { ThemeContext } from "./Theme/ThemeContext";
 
-import darkmodes from './../images/icon-sun.svg';
-import lightmodes from './../images/icon-moon.svg';
+import ToggleBtn from "./Theme/ToggleBtn";
 
 const Header = () => {
-  const darkMode = useDarkMode();
-  const theme = useTheme();
+  const {theme} = useContext(ThemeContext);
 
   return (
-      <div className='Header'>
-        <h1>TODO</h1>
-        <div>
-          <button className="SwitchTheme-btn" type="button" onClick={darkMode.toggle}>
-            {theme === "dark-mode" ? <img src={darkmodes} alt='Change design mode' /> : <img src={lightmodes} alt='Change design mode' />}
-          </button>
-        </div>
+    <div className={theme ? "Header light-mode" : "Header dark-mode" }>
+      <h1>TODO</h1>
+      <div>
+        <ToggleBtn></ToggleBtn>
       </div>
-    );
-  }
+    </div>
+  );
+}
   
 export default Header;

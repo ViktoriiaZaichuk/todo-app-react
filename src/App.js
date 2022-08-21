@@ -1,11 +1,14 @@
+import React from "react";
 import './App.css';
 import TodoBox from './Components/TodoBox';
+import ThemeContextProvider from "./Components/Theme/ThemeContext";
 
-function App() {
+const App = () => {
+  
   return (
-    <div className='TodoApp'>
-      <TodoBox />
-    </div> 
+      <ThemeContextProvider>
+        <TodoBox />
+      </ThemeContextProvider>
   );
 }
 

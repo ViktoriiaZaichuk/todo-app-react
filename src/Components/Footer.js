@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./Theme/ThemeContext";
 
-function Footer() {
-    return (
-      <div className='Footer'>
-        <p>Drag and drop to reorder list</p>
-      </div>
-    );
-  }
+const Footer = () => {
+  const {theme} = useContext(ThemeContext);
+
+  return (
+    <div className={theme ? "Footer light-mode" : "Footer dark-mode" }>
+      <p>Drag and drop to reorder list</p>
+    </div>
+  );
+}
   
-  export default Footer;
+export default Footer;

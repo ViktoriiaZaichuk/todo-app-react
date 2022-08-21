@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../Theme/ThemeContext";
 
-function Todo() {
-    return (
-      <div className='Todo'> 
-      </div>
-    );
-  }
+const Todo = () => {
+  const {theme} = useContext(ThemeContext);
+
+  return (
+    <div className={theme ? "Todo light-mode" : "Todo dark-mode" }> 
+    </div>
+  );
+}
   
-  export default Todo;
+export default Todo;

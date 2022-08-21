@@ -1,18 +1,25 @@
 /* Background styles */
 .TodoApp {
     position: relative;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .4s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
 }
 
 .TodoApp.dark-mode {
-    background-color: beige;
+    background-color: var(--color-very-dark-blue);
+    background-image: url('./images/bg-desktop-dark.jpg');
 }
 
 .TodoApp.light-mode {
-    background-color: black;
+    background-color: var(--color-very-light-grayish-blue);
+    background-image: url('./images/bg-desktop-light.jpg');
 }
 
 
@@ -27,9 +34,34 @@
     justify-content: center;
 
 }
+.TodoBox.light-mode {
+
+}
+.TodoBox.dark-mode {
+
+}
 
 .TodoBox-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.TodoBox-Container > * {
+    flex: 1;
+    margin-bottom: 3rem;
+}
+
+.TodoForm {
+    padding: 1rem;
+}
+.TodoForm.dark-mode {
+    padding: 1rem;
+    background-color: var(--color-very-dark-desaturated-blue);
+}
+.TodoForm.light-mode {
+    padding: 1rem;
+    background-color: var(--color-very-light-gray);
 }
 
 /* Header */
@@ -40,29 +72,58 @@
     justify-content: space-between;
 }
 
+/* Toggle Button */
+.toggle-btn {
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    background-color: transparent;
+    border: none;
+}
+
+
 /* Form */
 input {
     width: 100%;
     padding: 0;
     border: none;
+    background-color: transparent;
 }
 
 /* Todo list */
 .TodoList {
     background-color: hsl(235, 24%, 19%);
+    padding: 1rem;
+    
+}
+.TodoList.dark-mode {
+    padding: 1rem;
+    background-color: var(--color-very-dark-desaturated-blue);
+}
+.TodoList.light-mode {
+    padding: 1rem;
+    background-color: var(--color-very-light-gray);
 }
 
-.TodoList-Btns {
+.TodoListBtns {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
 }
 
-.Todo-Status {
+.TodoListBtns.dark-mode {
+    color: var(--color-very-light-grayish-blue);
+}
+.TodoListBtns.light-mode {
+    color: var(--color-dark-grayish-blue);
+}
+
+.TodoStatus {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 2rem;
+    padding: 0 .5rem;
 }
 
 

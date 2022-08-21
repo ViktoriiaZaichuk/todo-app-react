@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../Theme/ThemeContext";
 
-function TodoForm() {
-    return (
-      <div className='TodoForm'>
-        <input 
-            type="text"
-            value="Currently typing"
-        />
-      </div>
-    );
-  }
+const TodoForm = () => {
+  const {theme} = useContext(ThemeContext);
+
+  return (
+    <div className={theme ? "TodoForm light-mode" : "TodoForm dark-mode" }>
+      <input 
+          type="text"
+          value="Currently typing"
+      />
+    </div>
+  );
+}
   
-  export default TodoForm;
+export default TodoForm;

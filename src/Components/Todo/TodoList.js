@@ -1,33 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../Theme/ThemeContext";
 
 import Todo from './Todo';
 
-function TodoList() {
-    return (
-      <div className='TodoList'>
-        <Todo />
+const TodoList = () => {
+  const {theme} = useContext(ThemeContext);
 
-        <div className="TodoList-Btns">
+  return (
+    <div className={theme ? "TodoList light-mode" : "TodoList dark-mode" }>
+      <Todo />
+
+      <div className={theme ? "TodoListBtns light-mode" : "TodoListBtns dark-mode" }>
+        <div>
+          5 items left
+        </div>
+        <div className={theme ? "TodoStatus light-mode" : "TodoStatus dark-mode" }>
           <div>
-            5 items left
-          </div>
-          <div className="Todo-Status">
-            <div>
-              All
-            </div>
-            <div>
-              Active
-            </div>
-            <div>
-              Completed
-            </div>
+            All
           </div>
           <div>
-            Clear Completed
+            Active
+          </div>
+          <div>
+            Completed
           </div>
         </div>
+        <div>
+          Clear Completed
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
   
-  export default TodoList;
+export default TodoList;
