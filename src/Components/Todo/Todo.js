@@ -5,7 +5,8 @@ const Todo = () => {
   const {theme} = useContext(ThemeContext);
 
   return (
-    <div className={theme ? "Todo light-mode" : "Todo dark-mode" }> 
+    <div className={theme ? "Todo light-mode" : "Todo dark-mode" }>
+       
     </div>
   );
 }

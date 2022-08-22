@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "./Theme/ThemeContext";
 
 import Header from "./Header";
@@ -9,12 +9,19 @@ import Footer from "./Footer";
 const TodoBox = () => { 
   const {theme} = useContext(ThemeContext);
 
+  const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
+
   return (
     <div className={theme ? "TodoApp light-mode" : "TodoApp dark-mode" }>
       <div className={theme ? "TodoBox light-mode" : "TodoBox dark-mode" }>
         <div className={theme ? "TodoBox-Container light-mode" : "TodoBox-Container dark-mode" }>
             <Header />
-            <TodoForm />
+            <TodoForm 
+            inputText={inputText} 
+            setInputText={setInputText} 
+            todos={todos} 
+            setTodos={setTodos} />
             <TodoList />
             <Footer />
         </div>

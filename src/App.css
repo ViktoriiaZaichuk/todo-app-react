@@ -34,6 +34,7 @@
     justify-content: center;
 
 }
+
 .TodoBox.light-mode {
 
 }
@@ -52,17 +53,6 @@
     margin-bottom: 3rem;
 }
 
-.TodoForm {
-    padding: 1rem;
-}
-.TodoForm.dark-mode {
-    padding: 1rem;
-    background-color: var(--color-very-dark-desaturated-blue);
-}
-.TodoForm.light-mode {
-    padding: 1rem;
-    background-color: var(--color-very-light-gray);
-}
 
 /* Header */
 .Header {
@@ -82,11 +72,44 @@
 
 
 /* Form */
-input {
+.TodoForm {
+    padding: 1rem;
+}
+.TodoForm.dark-mode {
+    padding: 1rem;
+    background-color: var(--color-very-dark-desaturated-blue);
+}
+.TodoForm.dark-mode input[type=text] {
+    color: var(--color-very-light-grayish-blue);
+}
+.TodoForm.dark-mode input[type=text]::placeholder {
+    color: var(--color-very-light-grayish-blue);
+}
+
+.TodoForm.light-mode {
+    padding: 1rem;
+    background-color: var(--color-very-light-gray);
+}
+.TodoForm.light-mode input[type=text] {
+    color: var(--color-dark-grayish-blue);
+}
+.TodoForm.light-mode input[type=text]::placeholder {
+    color: var(--color-dark-grayish-blue);
+}
+
+input[type=text] {
     width: 100%;
     padding: 0;
     border: none;
     background-color: transparent;
+}
+
+input[type=text]:focus {
+    outline: transparent;
+}
+
+#submitTodo {
+    display: none;
 }
 
 /* Todo list */
