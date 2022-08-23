@@ -18,11 +18,15 @@ const TodoBox = () => {
         <div className={theme ? "TodoBox-Container light-mode" : "TodoBox-Container dark-mode" }>
             <Header />
             <TodoForm 
-            inputText={inputText} 
-            setInputText={setInputText} 
-            todos={todos} 
-            setTodos={setTodos} />
-            <TodoList />
+              inputText={inputText} 
+              setInputText={setInputText} 
+              todos={todos} 
+              setTodos={setTodos}
+            />
+            <TodoList 
+              todos={todos} 
+              setTodos={setTodos}
+            />
             <Footer />
         </div>
       </div>
