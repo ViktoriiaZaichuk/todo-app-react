@@ -3,18 +3,21 @@ import { ThemeContext } from "../Theme/ThemeContext";
 
 import Todo from './Todo';
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos, setTodos}) => {
   const {theme} = useContext(ThemeContext);
 
   return (
     <div className={theme ? "TodoList light-mode" : "TodoList dark-mode" }>
       <ul>
         {todos.map(todo => (        
-          <Todo 
+          <Todo
+            todos={todos} 
+            setTodos={setTodos} 
             key={todo.id}
             id={todo.id}
             text={todo.text}
             completed={todo.completed}
+            todo={todo}
           />
         ))}
       </ul>

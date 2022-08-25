@@ -26,6 +26,7 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos }) => {
   return (
     <div className={theme ? "TodoForm light-mode" : "TodoForm dark-mode" }>
       <form>
+        <span className="Btn-checked"></span>
         <input 
             type="text"
             name="todo-input"
