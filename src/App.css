@@ -145,6 +145,18 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
+.Btn-checked.completed {
+    background-image: linear-gradient(
+        to bottom right,
+        var(--color-gradient-start),
+        var(--color-gradient-end)
+    );
+}
+
+.TodoItem.completed {
+    text-decoration: line-through;
+}
+
 .TodoList {
     background-color: hsl(235, 24%, 19%);
     border-radius: 10px;
