@@ -121,7 +121,9 @@ input[type=text]:focus {
     align-items: center;
     padding: 1rem;
     border-bottom: .1rem solid var(--color-dark-grayish-blue);
+    transition: all .2s;
 }
+
 .Btn-delete {
     background-color: transparent;
     border: none;
@@ -143,6 +145,7 @@ input[type=text]:focus {
     border-radius: 50%;
     margin-right: 1rem;
     cursor: pointer;
+    transition: all .3s;
 }
 
 .Btn-checked.completed {
@@ -189,6 +192,10 @@ input[type=text]:focus {
     justify-content: space-between;
     margin: 0 2rem;
     padding: 0 .5rem;
+}
+
+.TodoStatus > div {
+    margin: 0 .5rem;
 }
 
 

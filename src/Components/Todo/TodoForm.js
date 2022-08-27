@@ -27,18 +27,20 @@ const TodoForm = ({ inputText, setInputText, todos, setTodos }) => {
     <div className={theme ? "TodoForm light-mode" : "TodoForm dark-mode" }>
       <form>
         <span className="Btn-checked"></span>
-        <input 
-            type="text"
-            name="todo-input"
-            placeholder="Create a new todo..."
-            value={inputText}
-            onChange={inputTextHandler}
-        />
-        <button 
-        type="submit"
-        id="submitTodo"
-        onClick={submitTodoHandler}>
-        </button>
+        <div>
+          <input 
+              type="text"
+              name="todo-input"
+              placeholder="Create a new todo..."
+              value={inputText}
+              onChange={inputTextHandler}
+          />
+          <button 
+          type="submit"
+          id="submitTodo"
+          onClick={submitTodoHandler}>
+          </button>
+        </div>
       </form>
     </div>
   );

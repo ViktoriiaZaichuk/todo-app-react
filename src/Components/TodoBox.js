@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "./Theme/ThemeContext";
 
 import Header from "./Header";
@@ -11,6 +11,26 @@ const TodoBox = () => {
 
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState("All");
+  const [filterStatus, setFilterStatus] = useState([]);
+
+  const filteredTodoList = () => {
+    switch(filter) {
+      case "Completed":
+        setFilterStatus(todos.filter((todo) => todo.completed == true))
+        break;
+      case "Active":
+        setFilterStatus(todos.filter((todo) => todo.completed == false))
+        break;
+      default:
+        setFilterStatus(todos);
+        break;
+    }
+  };
+
+  useEffect(() => {
+    filteredTodoList();
+  }, [todos, filter]);
 
   return (
     <div className={theme ? "TodoApp light-mode" : "TodoApp dark-mode" }>
@@ -26,6 +46,8 @@ const TodoBox = () => {
             <TodoList 
               todos={todos} 
               setTodos={setTodos}
+              setFilter={setFilter}
+              filterStatus={filterStatus}
             />
             <Footer />
         </div>
