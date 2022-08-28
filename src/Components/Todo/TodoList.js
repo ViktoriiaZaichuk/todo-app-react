@@ -27,7 +27,10 @@ const TodoList = ({todos, setTodos, setFilter, filterStatus}) => {
       </ul>
 
       <div className={theme ? "TodoListBtns light-mode" : "TodoListBtns dark-mode" }>
-        <div>5 items left</div>
+        <div>
+          {filterStatus.filter((todo) => todo.completed === false).length} 
+          <span>items left</span>
+        </div>
         <div className={theme ? "TodoStatus light-mode" : "TodoStatus dark-mode" }>
           <div onClick={() => todoStatusFilter("All")}>All</div>
           <div onClick={() => todoStatusFilter("Active")}>Active</div>
