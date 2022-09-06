@@ -162,14 +162,16 @@ input[type=text]:focus {
 
 .TodoList {
     background-color: hsl(235, 24%, 19%);
-    border-radius: 10px;
-    
+    border-radius: 10px; 
 }
 .TodoList.dark-mode {
     background-color: var(--color-very-dark-desaturated-blue);
+    color: var(--color-very-light-grayish-blue);
 }
+
 .TodoList.light-mode {
     background-color: var(--color-very-light-gray);
+    color: var(--color-dark-grayish-blue);
 }
 
 .TodoListBtns {
@@ -177,6 +179,10 @@ input[type=text]:focus {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+}
+
+.TodoListBtn {
+    cursor: pointer;
 }
 
 .TodoListBtns.dark-mode {
@@ -198,6 +204,9 @@ input[type=text]:focus {
     margin: 0 .5rem;
 }
 
+.span-items {
+    padding-left: .5rem;
+}
 
 /* Footer */
 .Footer {
